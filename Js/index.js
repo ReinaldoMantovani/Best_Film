@@ -18,7 +18,7 @@ overlay.addEventListener("click", () => {
 
 const API_KEY = "api_key=4e477968b18c62c8aeae651019e5237c";
 const BASE_URL = "https://api.themoviedb.org/3";
-const API_URL = BASE_URL + '/discover/movie?sort_by=popularity.desc&' + API_KEY;
+const API_URL = BASE_URL + '/discover/movie?sort_by=popularity.desc&' + API_KEY + '&language=pt-BR';
 const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 const search_Url = BASE_URL + '/search/movie?' + API_KEY;
 
