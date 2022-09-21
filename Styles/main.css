@@ -387,7 +387,9 @@ nav.open ~ .overlay {
           display:none;
         }
         .movie  {
-          Width:100px
+          Width:100px;
+          display:flex;
+          flex-direction:column;
        }
         .movie-info h3 {
           font-size:14px;
@@ -396,11 +398,11 @@ nav.open ~ .overlay {
        }
         .movie-info span {
           padding:0.2rem;
-          background-color:blue;
           font-weight:bold;
        }
         .know-more .know-more-btn {
-          padding:0.2rem;
+          display:flex;
+          width:90%;
        }
         .know-more a {
           font-weight:lighter;
