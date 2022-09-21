@@ -387,9 +387,10 @@ nav.open ~ .overlay {
           display:none;
         }
         .movie  {
-          Width:100px;
+          Width:150px;
           display:flex;
           flex-direction:column;
+          flex-wrap:wrap;
        }
         .movie-info h3 {
           font-size:14px;
@@ -402,7 +403,7 @@ nav.open ~ .overlay {
        }
         .know-more .know-more-btn {
           display:flex;
-          width:90%;
+          width:100%;
        }
         .know-more a {
           font-weight:lighter;
