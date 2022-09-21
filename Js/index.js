@@ -45,7 +45,7 @@ function showMovies(data) {
                 <img src="${IMG_URL + poster_path}" alt="${title}">
                 <div class="movie-info">
                   <h3>${title}</h3>
-                  <span class="${getColor(vote_average)}">${vote_average}</span>
+                  <span class="${getColor(vote_average)}"><i class='bx bxs-star-half'></i> ${vote_average}</span>
                 </div>
                 <div class="know-more">
                     <a href="#" class="know-more-btn">Detalhes</a>
