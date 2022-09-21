@@ -387,7 +387,30 @@ nav.open ~ .overlay {
           display:none;
         }
         .movie  {
-         Width:100px
+          Width:100px
+       }
+        .movie-info h3 {
+          font-size:14px;
+          font-weight:lighter;
+          color:#000;
+       }
+        .movie-info span {
+          padding:0.2rem;
+          background-color:blue;
+          font-weight:bold;
+       }
+        .know-more .know-more-btn {
+          padding:0.2rem;
+       }
+        .know-more a {
+          font-weight:lighter;
+          font-size:14px;
+       }
+        .footer {
+          padding:0.5rem;
+       }
+        .footer p {
+          font-size:13px;
        }
       }
   
