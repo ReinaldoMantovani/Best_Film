@@ -400,6 +400,7 @@ nav.open ~ .overlay {
         .movie-info span {
           padding:0.2rem;
           font-weight:bold;
+          font-size:14px;
        }
         .know-more .know-more-btn {
           display:flex;
