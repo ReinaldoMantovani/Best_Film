@@ -404,10 +404,13 @@ nav.open ~ .overlay {
         .know-more .know-more-btn {
           display:flex;
           width:100%;
+          align-items:center;
+          justify-content:center;
        }
         .know-more a {
           font-weight:lighter;
           font-size:14px;
+          text-align:center;
        }
         .footer {
           padding:0.5rem;
