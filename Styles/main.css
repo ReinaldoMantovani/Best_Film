@@ -386,8 +386,8 @@ nav.open ~ .overlay {
         .search {
           display:none;
         }
-        .movie img {
-         Width:200px
+        .movie  {
+         Width:100px
        }
       }
   
