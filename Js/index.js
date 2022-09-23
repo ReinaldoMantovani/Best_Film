@@ -29,6 +29,14 @@ const visibleBtnScroll = () => {
       btnVisible.style.display = "none";
     }
  }
+visibleBtnScroll();
+const backtoTop = () => {
+ 
+  window.scroll({
+    top:0,
+    behavior:'smooth',
+  })
+}
 
 
 //API 
