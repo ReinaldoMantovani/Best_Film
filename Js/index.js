@@ -14,6 +14,23 @@ overlay.addEventListener("click", () => {
 });
 
 
+const visibleBtnScroll = () => {
+  let btnVisible = document.getElementById("visible");
+   window.onscroll = function() {
+     let csp = window.pageYOFFset;
+       if(csp > 20) {
+          btnVisible.style.bottom = "-5rem";
+       } else {
+         btnVisible.style.bottom = "1.3rem";
+       }
+    }
+    let cspt = window.pageYOFFset;
+    if(cspt < 20) {
+      btnVisible.style.display = "none";
+    }
+ }
+
+
 //API 
 
 const API_KEY = "api_key=4e477968b18c62c8aeae651019e5237c";
