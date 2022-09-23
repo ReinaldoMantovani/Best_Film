@@ -350,37 +350,48 @@ nav.open ~ .overlay {
 }
 
 #visible {
+  width:200px;
   display:flex;
-  position:fixed;
-  right:0.4rem;
+  position:relative;
+  justify-content:center;
+  margin:0 auto;
+  align-items:center;
   bottom:-5rem;
-  margin-bottom:2rem;
+  margin-bottom:4rem;
   background-color:transparent;
   z-index:200000;
   margin-top:1rem;
   transition:all 1s linear;
+  
 }
 
 
 #visible button {
+  display:flex;
+  width:100%;
+  align-items:center;
+  justify-content:center;
+  height:2rem;
   padding:0.5rem;
-  border-radius:50%;
-  background-color:#f00;
-  border:none;
+  border-radius:4px;
+  background-color:transparent;
+  border:2px solid #f00;
   cursor:pointer;
+  padding:0.5rem;
+  
 }
 
 #visible button i {
   color:#000;
   font-size:1rem;
+  
 }
 
 #visible button:hover {
-  background-color:transparent;
-  border:2px solid #f00;
-  color:#000;
+ background-color:#f00;
+ color:#000;
+ border:2px solid #f00;
 }
-
 .footer {
   position:fixed;
   width:100%;
