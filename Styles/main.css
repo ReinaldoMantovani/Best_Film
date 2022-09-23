@@ -356,7 +356,7 @@ nav.open ~ .overlay {
   justify-content:center;
   margin:0 auto;
   align-items:center;
-  bottom:-5rem;
+  bottom:-7rem;
   background-color:transparent;
   z-index:200000;
   margin-top:1rem;
@@ -369,14 +369,15 @@ nav.open ~ .overlay {
   display:flex;
   width:100%;
   align-items:center;
-  justify-content:center;
+  justify-content:space-between;
+  
   height:2rem;
   padding:0.5rem;
   border-radius:4px;
   background-color:transparent;
   border:2px solid #f00;
   cursor:pointer;
-  padding:0.5rem;
+  padding:1rem;
   
 }
 
