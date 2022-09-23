@@ -348,9 +348,37 @@ nav.open ~ .overlay {
   justify-content:center;
 }
 
-  
+#visible {
+  display:flex;
+  position:fixed;
+  right:0.4rem;
+  bottom:-5rem;
+  margin-bottom:2rem;
+  background-color:transparent;
+  z-index:200000;
+  margin-top:1rem;
+  transition:all 1s linear;
+}
 
 
+#visible button {
+  padding:0.5rem;
+  border-radius:50%;
+  background-color:#f00;
+  border:none;
+  cursor:pointer;
+}
+
+#visible button i {
+  color:#000;
+  font-size:1rem;
+}
+
+#visible button:hover {
+  background-color:transparent;
+  border:2px solid #f00;
+  color:#000;
+}
 
 .footer {
   position:fixed;
