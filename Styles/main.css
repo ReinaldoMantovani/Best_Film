@@ -297,8 +297,7 @@ nav.open ~ .overlay {
   z-index:99;
 }
 
-.movie-info {
-  
+.movie-info { 
   display:flex;
   align-items:center;
   justify-content:center;
@@ -465,7 +464,23 @@ nav.open ~ .overlay {
   color:red;
 }
  
- 
+ @media screen and (min-width:699px) {
+    .movie-info {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:0.6rem;
+    }
+    .movie-info h3 {
+      color:#eeee;
+      letter-spacing:0.1rem;
+      font-weight:400;
+      display:flex;
+      justify-conten:center;
+      align-item:center;
+    }
+ }
+
   @media screen and  (max-width: 699px) {
       header .navbar-menu {    
           display:none;
@@ -479,10 +494,16 @@ nav.open ~ .overlay {
           flex-direction:column;
           flex-wrap:wrap;
        }
+
+       .movie-info {
+        padding:1rem;
+       }
+
         .movie-info h3 {
           font-size:14px;
           font-weight:lighter;
-          color:#000;
+          color:#eeee;
+          font-weight:400;
        }
         .movie-info span {
           padding:0.2rem;
