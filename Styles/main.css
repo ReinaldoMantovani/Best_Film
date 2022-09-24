@@ -496,6 +496,7 @@ nav.open ~ .overlay {
        }
 
        .movie-info {
+
         padding:1rem;
        }
 
@@ -511,10 +512,12 @@ nav.open ~ .overlay {
           font-size:14px;
        }
         .know-more .know-more-btn {
+
           display:flex;
           width:100%;
           align-items:center;
           justify-content:center;
+          z-index:999999;
        }
         .know-more a {
           font-weight:lighter;
