@@ -38,12 +38,15 @@ const backtoTop = () => {
   })
 }
 
+const userImg = document.getElementById("user-img");
+
 
 //API 
 
 const API_KEY = "api_key=4e477968b18c62c8aeae651019e5237c";
 const BASE_URL = "https://api.themoviedb.org/3";
 const API_URL = BASE_URL + '/discover/movie?sort_by=popularity.desc&' + API_KEY + '&language=pt-BR';
+
 const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 const search_Url = BASE_URL + '/search/movie?' + API_KEY;
 
@@ -60,18 +63,21 @@ getMovies(API_URL);
 
 
 function showMovies(data) {
+  console.log(data)
   main.innerHTML = "";
   data.forEach(movie => {
-    const { title, poster_path, vote_average, overview } = movie;
+    const { title, poster_path, vote_average,release_date,original_language,
+      overview } = movie;
     const movieEl = document.createElement('div');
     movieEl.classList.add('movie');
     movieEl.innerHTML = ` 
-                
+                <span id="lang">${original_language}</span>
+                <span id="vote" class="${getColor(vote_average)}"> ${vote_average}</span>
                 <img src="${IMG_URL + poster_path}" alt="${title}">
                 <div class="movie-info">
                   <h3>${title}</h3>
-                  <span class="${getColor(vote_average)}"> ${vote_average}</span>
-                </div>
+                  </div>
+                 
                 <div class="know-more">
                     <a href="#" class="know-more-btn">Detalhes</a>
                 </div>
@@ -84,9 +90,9 @@ function showMovies(data) {
 
 function getColor(vote) {
   if (vote >= 8) {
-    return 'green';
+    return 'white';
   } else if (vote >= 5) {
-    return 'purple';
+    return 'gray';
   } else {
     return 'red';
   }

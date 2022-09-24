@@ -21,7 +21,7 @@ ul {
 }
 
 body {
-  background-color:#fff;
+  background-color:#212121;
   overflow-x:hidden;
 }
 
@@ -162,10 +162,11 @@ nav.open .sidebar {
   width: 100%;
   height: 2rem;
   font-size:1rem;
+  outline:none;
 }
 
 .sidebar-content li .input-search  button {
-  margin-right:0.4rem;
+  margin-right:0.3rem;
   border-radius:50%;
   cursor: pointer;
 }
@@ -244,10 +245,10 @@ nav.open ~ .overlay {
   margin:1rem;
   border-radius:4x;
   box-shadow:0.2px 4px 5px rgba(0,0,0,0.1);
-  background-color:#eeee;
+  
   position:relative;
   overflow:hidden;
-  background-color:#fff;
+  background-color:#000;
   border-radius:4px;
   margin-top:0.5rem;
   margin-bottom:3rem;
@@ -255,46 +256,93 @@ nav.open ~ .overlay {
 }
 
 .movie img {
+  position:relative;
   width:100%;
   background-size:cover;
   align-items:center;
   object-fit:cover;
+  border-left-top-radius:4px;
+  border-right-top-radius:4px;
+  z-index:90;
+  transition:all 1s linear;
+}
+
+.movie img:hover {
+  opacity:0.8;
+  transform:scale(1.1);
+}
+
+#lang {
+  position:absolute;
+  display:flex;
+  left:0.4rem;
+  background-color:#f00;
+  color:#fff;
+  padding:0.4rem;
   border-radius:4px;
+  font-size:0.8rem;
+  z-index:99;
+  margin-top:0.3rem;
+  font-weight:400;
+}
+
+ #vote {
+  position:absolute;
+  background-color:#fc0;
+  right:0.4rem;
+  padding:0.4rem;
+  margin-top:0.3rem;
+  border-radius:4px;
+  font-weight:bold;
+  z-index:99;
 }
 
 .movie-info {
-  color:#000;
+  
   display:flex;
   align-items:center;
-  justify-content:space-between;
-  padding:0.5rem 1rem 1rem;
-  
+  justify-content:center;
+  padding:0.6rem;  
 }
 
 .movie-info h3 {
   margin-top:0;
-  color:#555;
-  font-weight:bold;
-  
+  color:#eeee;
+  letter-spacing:0.1rem;
+  font-weight:400;
+  display:flex;
+  justify-conten:center;
+  align-item:center;
 }
 
-.movie-info span {
-  background-color:#5555;
+/* .film-date {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
   padding:0.5rem;
+}
+
+.film-date .data-release {
+  background-color:#fc0;
+  padding:0.2rem;
+  color:#000;
+  font-size:0.8rem;
   border-radius:4px;
   font-weight:bold;
+} */
+
+
+
+ #vote.white {
+  color:#eeee;
 }
 
-.movie-info span.green {
-  color:blue;
+ #vote.gray {
+  color:#424242;
 }
 
-.movie-info span.purple {
-  color:#fff;
-}
-
-.movie-info span.red {
-  color:red;
+ #vote.red {
+  color:#b71c1c;
 }
 
 .know-more {
@@ -350,7 +398,8 @@ nav.open ~ .overlay {
 }
 
 #visible {
-  width:200px;
+  width:40px;
+  height:40px;
   display:flex;
   position:relative;
   justify-content:center;
@@ -368,28 +417,29 @@ nav.open ~ .overlay {
 #visible button {
   display:flex;
   width:100%;
+  height:100%;
   align-items:center;
-  justify-content:space-between;
+  justify-content:center;
   
-  height:2rem;
-  padding:0.5rem;
-  border-radius:4px;
+  padding:1rem;
+  border-radius:50%;
   background-color:transparent;
   border:2px solid #f00;
   cursor:pointer;
   padding:1rem;
-  
+  color:#eeee;
+  font-weight:bold;
 }
 
 #visible button i {
-  color:#000;
+  color:#eeee;
   font-size:1rem;
-  
+  font-weight:bold;
 }
 
 #visible button:hover {
  background-color:#f00;
- color:#000;
+ color:#eeee;
  border:2px solid #f00;
 }
 .footer {
@@ -414,12 +464,9 @@ nav.open ~ .overlay {
 .footer strong {
   color:red;
 }
-  /* Mobile First i.e Smaller to Larger Devices */
-
-  /* X-Small devices (portrait phones, less than 576px) */
-
-  /* Small devices (landscape phones, 576px and up) */
-  @media screen and  (max-width: 576px) {
+ 
+ 
+  @media screen and  (max-width: 699px) {
       header .navbar-menu {    
           display:none;
         }
@@ -453,6 +500,7 @@ nav.open ~ .overlay {
           font-size:14px;
           text-align:center;
        }
+      
         .footer {
           padding:0.5rem;
        }
@@ -461,17 +509,72 @@ nav.open ~ .overlay {
        }
       }
   
+  @media screen and (max-width:700px) { 
+    .sidebar-content ul li .input-search {
+      display:none;
+    }
+    .sidebar-content li .input-search input {
+      display:none;
+    }
+    .sidebar-content li .input-search button {
+      display:none;
+    }
+  }
+      
+    @media screen and (max-width:720px) {
+      .input-search {
+        display:flex;
+      }
+      .input-search input {
+        display:flex;
+      }
+    }
+      
 
   /* Medium devices (tablets, 768px and up) */
-  @media (max-width: 768px) { 
+  @media screen and (max-width: 768px) { 
     header .navbar-menu {    
-      display:none;
+      display:block;
+    }
+    .sidebar-content ul li .input-search {
+      display:flex;
+      width:100%;
+      height:3rem;
+    }
+    .sidebar-content li .input-search input {
+      display:flex;
+      Width:100%;
+      height:100%
+    }
+    
+    .sidebar-content li .input-search button {
+      display:flex;
+      height:2rem;
+      padding:0.5rem;
+      align-items:center;
+      justify-content:center;
+      border-radius:50%;
+      cursor:pointer;
+    }
+   
+    .sidebar-content li .input-search button i {
+      display:flex;
+      align-items:center;
+      font-size:14px;
     }
   }
    
 
   /* Large devices (desktops, 992px and up) */
-  @media (min-width: 992px) { ... }
+  @media (min-width: 992px) { 
+    
+    .sidebar-content ul li .input-search {
+      display:none;
+    }
+    .sidebar-content li .input-search  {
+      display:none;
+    }
+  }
 
   /* X-Large devices (large desktops, 1200px and up) */
   @media (min-width: 1200px) { ... }
