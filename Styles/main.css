@@ -469,7 +469,7 @@ nav.open ~ .overlay {
       display:flex;
       align-items:center;
       justify-content:center;
-      padding:0.6rem;
+      padding:1rem;
     }
     .movie-info h3 {
       color:#eeee;
